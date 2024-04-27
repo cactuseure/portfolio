@@ -1,0 +1,93 @@
+body#blog {
+
+
+  section.all-posts{
+
+    .all-posts-head{
+      margin-bottom: 55px;
+      margin-top: 90px;
+      h1{
+        color: #21243D;
+        font-family: 'Heebo', sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px; /* 136.364% */
+      }
+    }
+
+    .all-posts-grid{
+      article{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #E5E5E5;
+        margin-bottom: 30px;
+
+        .post-title{
+          h2 {
+            margin-bottom: 5px;
+            color: var(--Dark-Color, #21243D);
+            font-family: 'Heebo', sans-serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+        }
+
+        .post-meta {
+          display: inline-block;
+          margin-bottom: 10px;
+
+          span {
+            &.post-date {
+              color: var(--Dark-Color, #21243D);
+              font-family: 'Heebo', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            &.post-categories {
+              display: inline-block;
+
+              color: var(--Light, #8695A4);
+              font-family: 'Heebo', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+
+              &:before {
+                content: "";
+                display: inline-block;
+                width: 2px;
+                height: 22px;
+                background: #21243D;
+                margin: 0 15px -4px;
+                @media screen and (max-width: $media-max-width) {
+                  height: 18px;
+                  margin-top: 1px;
+                }
+              }
+            }
+          }
+        }
+
+        .post-description {
+          p {
+            color: var(--Dark-Color, #21243D);
+            font-family: 'Heebo', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+
+      }
+    }
+  }
+
+}
