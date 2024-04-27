@@ -1,0 +1,11 @@
+{% extends "layout/simple-layout.html.twig" %}
+
+{% block title %}Le Blog{% endblock %}
+
+{% block main %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}

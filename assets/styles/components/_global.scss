@@ -1,0 +1,16 @@
+html{
+  background: $primary-color;
+}
+
+body{
+  color: $secondary-color;
+  font-size: $base-font-size;
+
+  margin: 0;
+}
+body {
+  h1 {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}
