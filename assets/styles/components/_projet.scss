@@ -40,7 +40,7 @@ body#work {
             padding-right: 0;
             margin: 0 auto;
           }
-          min-width: 250px;
+          min-width: 300px;
           max-width: 450px;
 
           @media screen and (min-width: 1200px) {
@@ -61,6 +61,11 @@ body#work {
           flex-direction: column;
 
           .project-title {
+
+            a{
+              text-decoration: none;
+              cursor: pointer;
+            }
             h3 {
               color: #21243D;
               font-family: 'Heebo', sans-serif;
@@ -69,6 +74,8 @@ body#work {
               font-weight: 700;
               line-height: normal;
               margin: 0;
+              cursor: pointer;
+
 
               @media screen and (max-width: $media-max-width) {
                 font-size: 24px;

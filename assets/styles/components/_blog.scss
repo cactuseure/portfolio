@@ -33,6 +33,10 @@ body#blog {
             line-height: normal;
           }
 
+          a {
+            text-decoration: none;
+          }
+
         }
 
         .post-meta {
@@ -84,10 +88,47 @@ body#blog {
             font-weight: 400;
             line-height: normal;
           }
+
+          a {
+            color: var(--Dark-Color, #21243D);
+            cursor: pointer
+          }
         }
 
       }
     }
   }
 
+}
+
+body#article {
+  h1 {
+    color: #21243D;
+    font-family: "Heebo", sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+
+  }
+
+  nav.breadcrumb {
+    margin-top: 50px;
+
+    margin-bottom: 0;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  div.meta {
+    margin-top: -8px;
+    margin-bottom: 30px;
+    color: #7e7e7e;
+
+    span {
+      color: #7e7e7e;
+    }
+  }
 }

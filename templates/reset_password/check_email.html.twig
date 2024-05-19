@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body_attribut %}reset-password{% endblock %}
+
+{% block title %}Courriel de réinitialisation du mot de passe envoyé{% endblock %}
+
+{% block body %}
+<main id="wrapper">
+    <section class="reset-page">
+        <div class="form-reset">
+            <p>
+                If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+                This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+            </p>
+            <p>If you don't receive an email please check your spam folder or <a href="{{ path('app_forgot_password_request') }}">try again</a>.</p>
+        </div>
+
+        <div class="group1">
+            <img src="{{ asset('img/login/group1.svg') }}">
+        </div>
+        <div class="group2">
+            <img src="{{ asset('img/login/group2.svg') }}">
+        </div>
+        <div class="group2-bis">
+            <img src="{{ asset('img/login/group2.svg') }}">
+        </div>
+
+    </section>
+</main>
+
+{% endblock %}

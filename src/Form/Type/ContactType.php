@@ -22,18 +22,18 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'constraints' => new NotBlank(),
-                'label' => 'Votre nom'
+                'label' => 'Nom'
             ])
             ->add('email', EmailType::class, [
                 'constraints' => [
                     new NotBlank(),
                     new Email()
                 ],
-                'label' => 'Votre adresse email'
+                'label' => 'Email'
             ])
             ->add('message', TextareaType::class, [
                 'constraints' => new NotBlank(),
-                'label' => 'Votre message'
+                'label' => 'Message'
             ])
             ->add('submit', SubmitType::class, ['label' => 'Envoyer']);
     }

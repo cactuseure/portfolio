@@ -1,5 +1,15 @@
 header {
+  @media screen and (max-width: $media-min-width) {
+    height: 45px;
 
+    .navbar-collapse.justify-content-end {
+      z-index: 1000;
+      background: #FFF;
+    }
+  }
+
+  background: #fff;
+  position: relative;
   nav.navbar-expand-lg {
     padding: 0;
     @media screen and (max-width: $media-max-width) {
@@ -65,5 +75,31 @@ header {
 
   .navbar-nav a:last-child {
     margin-right: 15px;
+  }
+
+  .back-home {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+
+    a {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+
+      font-family: "Heebo", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 }

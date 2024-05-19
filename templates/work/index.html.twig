@@ -1,6 +1,6 @@
 {% extends "layout/simple-layout.html.twig" %}
 
-{% block title %}Work - Mattéo Groult{% endblock %}
+{% block title %}Projets - Mattéo Groult{% endblock %}
 
 {% block body_attribut %}work{% endblock %}
 
@@ -9,43 +9,28 @@
         <section class="all-projects">
             <div class="container-md">
                 <div class="all-projects-head">
-                    <h1>Work</h1>
+                    <h1>Projets</h1>
                 </div>
                 <div class="all-projects-grid">
-                    <article>
-                        <div class="project-thumbnail">
-                            <img src="{{ asset('img/project-lampemasume.jpeg') }}" alt="project thumbnail" class="img-fluid">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Lampemasume</h3>
+                    {% for project in projects %}
+                        <article>
+                            <div class="project-thumbnail">
+                                <a target="_blank" href="{{ project.link }}"><img src="{{ asset('img/project/' ~ project.thumbnail) }}" alt="project thumbnail" class="img-fluid"></a>
                             </div>
-                            <div class="project-meta">
-                                <span class="project-date">2022</span>
-                                <span class="project-tag">Wordpress, Woocommerce</span>
+                            <div class="project-content">
+                                <div class="project-title">
+                                    <a target="_blank" href="{{ project.link }}"><h3>{{ project.title }}</h3></a>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="project-date">{{ project.projectDate|date('Y') }}</span>
+                                    <span class="project-tag">{{ project.tags|join(', ') }}</span>
+                                </div>
+                                <div class="project-description">
+                                    {{ project.description|raw }}
+                                </div>
                             </div>
-                            <div class="project-description">
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="project-thumbnail">
-                            <img src="{{ asset('img/project-maison-d-hotes-spa-hermival.jpeg') }}" alt="project thumbnail" class="img-fluid">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Maison d'Hôtes Spa Hermival</h3>
-                            </div>
-                            <div class="project-meta">
-                                <span class="project-date">2021</span>
-                                <span class="project-tag">Wordpress, Vitrine</span>
-                            </div>
-                            <div class="project-description">
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
+                    {% endfor %}
                 </div>
             </div>
         </section>

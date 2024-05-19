@@ -1,5 +1,17 @@
 body#home {
 
+  .stack-list{
+    display: flex;
+    gap: 15px;
+   align-items: center;
+    justify-content: center;
+    svg {
+      width: 40px;
+      object-fit: contain;
+      height: fit-content;
+    }
+  }
+
 
   section.above-the-fold {
     min-height: calc(100vh - 80px);
@@ -226,6 +238,11 @@ body#home {
             @media screen and (max-width: $media-max-width) {
               font-size: 16px;
               font-weight: 400;
+            }
+
+            a{
+              color: var(--Dark-Color, #21243D);
+
             }
           }
         }

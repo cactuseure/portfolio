@@ -1,0 +1,39 @@
+{% extends 'layout/simple-layout.html.twig' %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block body_attribut %}article{% endblock %}
+
+
+{% block main %}
+    <main id="wrapper">
+        <section class="article container">
+
+            <nav class="breadcrumb">
+                <ul>
+                    <li class="breadcrumb-item"><a href="{{ path('app_home_index') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ path('app_blog_index') }}">Blog</a></li>
+                    <li class="breadcrumb-item"><span class="current-item">{{ article.title }}</span></li>
+                </ul>
+            </nav>
+            <h1>{{ article.title }}</h1>
+            <div class="meta">
+                <span>
+                    Dernière modification le {{ article.updatedAt|date('d/m/y') }}
+                </span>
+                |
+                <span>
+                    Catégories : {{ article.categories|join(', ') }}
+                </span>
+            </div>
+            <div class="article-content">
+                {{ article.content|raw }}
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}
+

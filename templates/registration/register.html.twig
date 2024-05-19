@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body_attribut %}register{% endblock %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <main id="wrapper">
+
+        {% for flash_error in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+        {% endfor %}
+
+        <section class="login-page">
+            <form method="post">
+                <h1>Inscription</h1>
+
+                {{ form_errors(registrationForm) }}
+
+                {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.email) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+
+                {{ form_row(registrationForm.confirmPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_row(registrationForm.agreeTerms) }}
+
+                <button type="submit" class="btn">S'inscrire</button>
+                {{ form_end(registrationForm) }}
+
+            </form>
+            <div class="group1">
+                <img src="{{ asset('img/login/group1.svg') }}">
+            </div>
+            <div class="group2">
+                <img src="{{ asset('img/login/group2.svg') }}">
+            </div>
+            <div class="group2-bis">
+                <img src="{{ asset('img/login/group2.svg') }}">
+            </div>
+
+        </section>
+    </main>
+{% endblock %}
